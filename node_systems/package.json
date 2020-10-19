@@ -1,0 +1,28 @@
+{
+  "name": "node_systems",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@supercharge/strings": "^1.12.0",
+    "base64url": "^3.0.1",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "csrf": "^3.1.0",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.2",
+    "morgan": "^1.10.0",
+    "uWebSockets.js": "github:uNetworking/uWebSockets.js#v18.5.0",
+    "uuid": "^8.3.1"
+  }
+}

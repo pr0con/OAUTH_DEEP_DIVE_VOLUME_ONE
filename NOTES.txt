@@ -1,0 +1,46 @@
+- mkdir keycertz
+- openssl genrsa -des3 -out mykey.pem 2048
+- openssl rsa -in mykey.pem -pubout > mykey.pub
+
+Nginx Certbot ubuntu 20.04 LTS
+	- apt install certbot python3-certbot-nginx
+	- service nginx stop
+	- sudo certbot certonly --standalone -d yourdomain.com -d www.yourdomain.com
+	- service nginx start
+
+The Interface: (with key listener link in app provider)
+	- https://github.com/pr0con/FULLSTACK_3D_FRAMEWORK <--- red interface
+	- https://github.com/pr0con/FULLSTACK_3D_FRAMEWORK/blob/master/parcel_blueprint_blue_interface/src/Components/AppProvider.js
+
+Encryption Refs:
+	- https://stackoverflow.com/questions/60369148/how-do-i-replace-deprecated-crypto-createcipher-in-nodejs
+
+OAUTH REFERENCES
+	- https://github.com/oauthinaction/oauth-in-action-code
+	- https://auth0.com/blog/oauth2-implicit-grant-and-spa
+	- https://tools.ietf.org/html/rfc6749
+	
+CSRF
+	- https://github.com/pillarjs/csrf
+	- https://auth0.com/docs/protocols/state-parameters
+	
+	
+CSS GRID
+	- https://www.digitalocean.com/community/tutorials/css-align-justify
+	
+
+OAUTH 2.0 Authorization Code Flow Notes
+	1. Create Users and Clients (little apps working on behalf of resource owner)
+	2. Foreach client generate a state parameter 
+	3. /authorize route
+		- check client exists
+		- check scopes of client (not implemented yet)
+		- notice secret not sent with code request
+		- also add check for redirect uri existing in array of allowed uri's 
+		  for client (currently only using one could split sting by, and store multiple)
+		- generate an LCID for the client request like we did for master login
+			- IN PLACE OF SECRET because storing a secret is unsafe in SPA
+			- use DB Secret for back channels...
+	4. Using client callback generate Url with parameters
+	
+	
