@@ -76,7 +76,7 @@ router.post('/api/auth/refresh_token', async (req,res) => {
 		else {
 			res.status(200).json({ success: false, code: 'missing-refresh-token', message: "Refresh Token Missing from Cookies." });
 		}
-	}else {
+	} else {
 		res.status(200).json({ success: false, code: 'missing-grant-type-invalid', message: "Missing Grant Type or Invalid" });
 	}
 });

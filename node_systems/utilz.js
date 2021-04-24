@@ -55,15 +55,15 @@ const system_configuration = {
 			issuer: "void.pr0con.com", 	
 			audience: "void.pr0con.com"	,
 			subject: "Development Services",
-			algorithm: "RS256",
-			expiresIn: "30m",
+			algorithm: ["RS256"], //neds to be array 
+			expiresIn: "30m",	  //validated by function
 		},
 		"rt_verify_options": {
 			issuer: "void.pr0con.com", 	
 			audience: "void.pr0con.com"	,
 			subject: "Development Services",
-			algorithm: "RS256",	
-			expiresIn: "24h",	
+			algorithm: ["RS256"],	 //needs to be array
+			expiresIn: "24h",		//validated by function
 		}
 	}
 }
